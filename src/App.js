@@ -1,9 +1,12 @@
 import React from "react";
+import Router from "./Router";
+import {Provider} from "./context/ui.context";
 
 function App() {
   return (
-    <div className="App">
-    </div>
+    <Provider>
+      <Router />
+    </Provider>
   );
 }
 
