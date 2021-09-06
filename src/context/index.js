@@ -1,5 +1,5 @@
-import useUI from "./ui.context";
+import useUser from "./user.context";
 
 export {
-  useUI
+  useUser
 };

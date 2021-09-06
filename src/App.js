@@ -1,6 +1,6 @@
 import React from "react";
 import Router from "./Router";
-import {Provider} from "./context/ui.context";
+import {Provider} from "./context/user.context";
 
 function App() {
   return (

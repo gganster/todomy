@@ -3,7 +3,7 @@ import * as RS from "reactstrap";
 
 import styles from "../style/layout.module.scss";
 
-const Layout = () => {
+const Layout = ({children}) => {
   const [isOpen, setIsOpen] = useState(false);
 
   return (
@@ -24,6 +24,7 @@ const Layout = () => {
           </RS.Nav>
         </RS.Collapse>
       </RS.Navbar>
+      {children}
     </div>
   )
 }

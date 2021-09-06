@@ -1,6 +1,7 @@
 import React from "react";
 import RRD from "react-router-dom";
 import {useAuth} from "./hook";
+import {useUser} from "./context";
 
 import {
   LoggedLayout,
@@ -13,11 +14,11 @@ import {
 
 const Router = () => {
   const [user, loading] = useAuth();
+  const [usr] = useUser();
+  const Layout = user && !user.isAnonymous ? LoggedLayout : AnonymousLayout;
 
   if (loading)
     return <Loading />;
-
-  const Layout = AnonymousLayout;
 
   return (
     <>
