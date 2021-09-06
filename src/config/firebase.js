@@ -1,22 +1,23 @@
-import firebase from 'firebase';
+import firebase from "firebase";
 
-const MODE = "EMULATOR"; //[PROD, EMULATOR]
+const MODE = "PROD"; //[PROD, EMULATOR]
 const EMULATOR_IP = "localhost";
 
 var firebaseProdConfig = {
-  apiKey: "AIzaSyACPJzjYGMgcUUOjzrVDadib7818jIgPU8",
-  authDomain: "jabi-e3a1e.firebaseapp.com",
-  databaseURL: "https://jabi-e3a1e-default-rtdb.europe-west1.firebasedatabase.app",
-  projectId: "jabi-e3a1e",
-  storageBucket: "jabi-e3a1e.appspot.com",
-  messagingSenderId: "456790792169",
-  appId: "1:456790792169:web:b34c3f0b0a8e23233f9d78",
-  measurementId: "G-2ZSZZJGDG2"
+  apiKey: "AIzaSyCcFQpFHCMr8t9kPlFH1mpfKr4uPmANJ6Q",
+  authDomain: "todomy-8c139.firebaseapp.com",
+  projectId: "todomy-8c139",
+  storageBucket: "todomy-8c139.appspot.com",
+  messagingSenderId: "748112779819",
+  appId: "1:748112779819:web:02a731084beaa42491286e",
+  measurementId: "G-V9DJ3JK0L5"
 };
 
 if (MODE === "PROD") { //PROD
+  console.log("firebase initialized in prod mode")
   firebase.initializeApp(firebaseProdConfig);
 } else { //EMULATOR
+  console.log("firebase initialized in emulator mode")
   firebase.initializeApp(firebaseProdConfig);
   firebase.auth().useEmulator(`http://${EMULATOR_IP}:9099/`);
   firebase.functions().useEmulator(`${EMULATOR_IP}`, 5001)

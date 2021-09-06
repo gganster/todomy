@@ -1,0 +1,8 @@
+.layout {
+  background-color: red;
+  width: 100%;
+  min-height: 100%;
+  :global(.nav-link) {
+    cursor: pointer;
+  }
+}
