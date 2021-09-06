@@ -27,9 +27,11 @@ const useAuth = () => {
         }
         if (meta.exists) {
           dispatch({type: "login", user: Object.assign(usr, meta.data())});
+          setUser(Object.assign(usr, meta.data()));
         } else {
           auth.signOut();
           dispatch({type: "logout"});
+          setUser(false);
         }
       } else {//create anonymous account
         let res = await auth.signInAnonymously();
@@ -41,7 +43,6 @@ const useAuth = () => {
                        .set(payload);
       }
       setLoading(false);
-      setUser(usr);
     })
     return (subscribe);
   }, [])

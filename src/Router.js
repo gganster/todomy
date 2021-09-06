@@ -1,7 +1,12 @@
 import React from "react";
-import RRD from "react-router-dom";
 import {useAuth} from "./hook";
-import {useUser} from "./context";
+
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect
+} from 'react-router-dom';
 
 import {
   LoggedLayout,
@@ -9,22 +14,33 @@ import {
 } from "./layout";
 
 import {
-  Loading
+  Loading,
+  Home,
+  Register,
+  Login,
+  Profile
 } from "./page";
 
-const Router = () => {
+const AppRouter = () => {
   const [user, loading] = useAuth();
-  const [usr] = useUser();
   const Layout = user && !user.isAnonymous ? LoggedLayout : AnonymousLayout;
 
   if (loading)
     return <Loading />;
 
   return (
-    <>
-      <Layout />
-    </>
+    <Router>
+      <Layout>
+        <Switch>
+          <Route exact path="/"><Home /></Route>
+          <Route exact path="/register"><Register /></Route>
+          <Route exact path="/login"><Login /></Route>
+          <Route exact path="/profile"><Profile /></Route>
+          <Route path="*"><Redirect to="/" /></Route>
+        </Switch>
+      </Layout>
+    </Router>
   )
 }
 
-export default Router;
+export default AppRouter;
