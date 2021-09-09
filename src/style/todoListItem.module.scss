@@ -1,0 +1,30 @@
+.container {
+  display: flex;
+  justify-content: space-between;
+  
+  height: 45px;
+  width: 100%;
+  padding: 0 5px;
+  margin: 5px 0;
+  border-bottom: 1px solid lightgrey;
+  &:last-child {
+    margin-bottom: 0;
+    border-bottom: 0;
+  }
+  .todoTitle {
+    font-size: 22px;
+    height: 40px;
+  }
+  .todoTitleEdit {
+    height: 40px;
+    width: 100%;
+  }
+  .todoActions {
+    display: flex;
+    margin-left: 10px;
+    button {
+      margin-left: 5px;
+      height: 40px;
+    }
+  }
+}

@@ -1,5 +1,15 @@
 import useAuth from "./useAuth";
+import {
+  useTodos,
+  useTodosSnapshot,
+  useTodo,
+  useTodoSnapshot
+} from "./useTodos";
 
 export {
-  useAuth
+  useAuth,
+  useTodos,
+  useTodosSnapshot,
+  useTodo,
+  useTodoSnapshot
 };

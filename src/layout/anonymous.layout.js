@@ -24,7 +24,9 @@ const Layout = ({children}) => {
           </RS.Nav>
         </RS.Collapse>
       </RS.Navbar>
-      {children}
+      <div className={styles.body}>
+        {children}
+      </div>
     </div>
   )
 }
