@@ -1,5 +1,4 @@
 import React, {useState} from "react";
-import * as RS from "reactstrap";
 import styles from "../style/home.module.scss";
 
 import {
