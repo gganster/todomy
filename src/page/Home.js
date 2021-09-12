@@ -6,8 +6,6 @@ import {
   TodoListAdd
 } from "../component";
 
-import {useTodos, useTodosSnapshot, useTodo, useTodoSnapshot} from "../hook";
-
 const Home = () => {
   return (
     <div className={styles.home}>
