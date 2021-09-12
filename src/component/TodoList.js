@@ -10,7 +10,9 @@ const TodoList = () => {
   return (
     <RS.Card className={styles.container}>
       {loading ? 
-        <RS.Spinner />
+        <div className={styles.spinnerContainer}>
+          <RS.Spinner color="primary" />
+        </div>
       : todos.length === 0 ?
         <p>no todos</p>
       :

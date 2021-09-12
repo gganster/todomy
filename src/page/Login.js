@@ -5,8 +5,6 @@ import { useHistory } from "react-router";
 import {useUser} from "../context";
 import styles from "../style/login.module.scss";
 
-const auth = firebase.auth;
-
 const Page = () => {
   const history = useHistory();
   const [user] = useUser();
