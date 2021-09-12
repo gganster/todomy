@@ -1,7 +1,6 @@
-import React, {useState, useEffect} from "react";
+import {useState, useEffect} from "react";
 import firebase from "firebase";
 import {useUser} from "../context";
-import { id } from "postcss-selector-parser";
 
 const firestore = firebase.firestore();
 
@@ -20,7 +19,7 @@ const useTodos = () => {
       setLoading(false);
     });
     return () => unsubscribe()
-  }, [])
+  }, [user])
 
   return ([data, loading]);
 }
@@ -43,7 +42,7 @@ const useTodosSnapshot = () => {
       setData(newData);
       setLoading(false);
     })()
-  }, []);
+  }, [user.uid]);
 
   return ([data, loading]);
 }
@@ -68,7 +67,7 @@ const useTodo = (uid) => {
       }
     })
     return (unsubscribe);
-  }, [])
+  }, [user.uid, uid])
 
   return ([data, loading]);
 }
@@ -90,7 +89,7 @@ const useTodoSnapshot = (uid) => {
       }
       setLoading(false);
     })()
-  }, [])
+  }, [user.uid, uid])
   return ([data, loading]);
 }
 

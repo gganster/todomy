@@ -8,7 +8,7 @@ const firestore = firebase.firestore();
 
 const TodoListItem = ({data}) => {
   const [user] = useUser();
-  const [loading, setLoading] = useState(false);
+  const [, setLoading] = useState(false);
   const [isEditing, setIsEditing] = useState(false);
   const [title, setTitle] = useState("");
 

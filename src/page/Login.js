@@ -23,7 +23,7 @@ const Page = () => {
   useEffect(() => {
     if (user.isAnonymous === false)
       history.push("/home");
-  }, [user]);
+  }, [user, history]);
 
   return (
     <div className={styles.login}>

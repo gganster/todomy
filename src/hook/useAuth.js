@@ -1,4 +1,4 @@
-import React, {useState, useEffect} from "react";
+import {useState, useEffect} from "react";
 import firebase from "firebase";
 import {sleep} from "../helper";
 import {useUser} from "../context";
@@ -45,7 +45,7 @@ const useAuth = () => {
       setLoading(false);
     })
     return (subscribe);
-  }, [])
+  }, [dispatch])
 
   return [user, loading];
 }

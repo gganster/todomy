@@ -7,7 +7,7 @@ import styles from "../style/todoListAdd.module.scss";
 const firestore = firebase.firestore();
 
 const TodoListAdd = () => {
-  const [loading, setLoading] = useState(false);
+  const [, setLoading] = useState(false);
   const [title, setTitle] = useState("");
   const [user] = useUser();
 

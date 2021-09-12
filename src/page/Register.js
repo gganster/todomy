@@ -1,13 +1,11 @@
 import React, {useState} from "react";
 import * as RS from "reactstrap";
 import firebase from "firebase";
-import { useHistory } from "react-router";
 import styles from "../style/register.module.scss"
 
 const auth = firebase.auth;
 
 const Register = () => {
-  const history = useHistory();
   const [mail, setMail] = useState("");
   const [password, setPassword] = useState("");
   const [confirm, setConfirm] = useState("");
