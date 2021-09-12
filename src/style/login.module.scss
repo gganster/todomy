@@ -1,0 +1,22 @@
+
+.login {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  .card {
+    width: 100%;
+    max-width: 400px;
+    padding: 10px 30px;
+    h2 {
+      text-align: center;
+    }
+    :global(.form-group){
+      margin: 10px 0;
+    }
+    .actionContainer {
+      display: flex;
+      justify-content: center;
+    }
+  }
+}
